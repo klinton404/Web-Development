@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Input Tag</title>
+</head>
+
+<body>
+    <h2>This is html Forms</h2>
+    <form action="backend.php">
+
+        <label for="name">Username</label>
+        <div>
+            <input type="text" name="name" id="name">
+        </div> <br>
+
+        <label for="id">ID</label>
+        <div>
+            <input type="number" name="MyRole" id="id">
+        </div> <br>
+
+        <div>
+            Gender = Male <input type="radio" name="MyGender" id="gender"> Female <input type="radio" name="MyGender"
+                id="gender">
+        </div> <br>
+
+        <label for="date of birth">Date of birth</label>
+        <div>
+            <input type="date" name="MyDateOfBirth" id="date of birth">
+        </div> <br>
+
+        <label for="email">Email</label>
+        <div>
+            <input type="email" name="MyEmail" id="email">
+        </div> <br>
+
+        <label for="photo">Photo</label>
+        <div>
+            <input type="file" name="MyPhoto" id="Photo">
+        </div> <br>
+
+        <div>
+            Write about your self: <br> <textarea name="MyText" cols="90" rows="10"></textarea>
+        </div> <br>
+
+        <label for="Are you Eligible">Are you Eligible?</label>
+        <div>
+            <input type="checkbox" name="My Eligibility" id="Are you Eligible">
+        </div> <br>
+
+        <label for="hobby">Hobby</label>
+        <select name="MyHobby" id="hobby">
+            <option value="tra">Travelling</option>
+            <option value="driv">Driving</option>
+            <option value="eat">Eating</option>
+            <option value="sleep">Sleeping</option>
+        </select>
+
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+
+    </form>
+</body>
+
+</html>
