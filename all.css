@@ -1,0 +1,77 @@
+.container {
+    background-color: gray;
+}
+
+
+.animation{
+    background-color: green;
+    width: 500px;
+    position: relative;
+    animation-name: klinton;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: alternate;
+    animation-timing-function: ease-in;          /*  slow - fast  */
+    animation-timing-function: ease-out;           /*  slow - fast  */
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes klinton {
+    from {
+        width: 50px;
+    }
+    to {
+        width: 500px;
+    }
+}
+
+
+
+body{
+    background-color: white;
+}
+
+#box{
+    display: flex;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(116, 112, 112);
+    transition-property: backgrond-color;     /* ki transition korte chacchi */
+    transition-duration: 0.5;
+
+
+    transition: all 0.5s ease-in-out;         
+}
+
+#box:hover{
+    transform: rotate(360deg);
+    background-color: black;
+}
+
+
+
+.grid{
+    display: grid;
+    
+    grid-template-columns: 300px 300px;                              /* (grid) container e row te sudhu 2 ta item thakbe baki gulo niche chole jabe */
+    grid-template-columns: repeat(3, 3fr);                           /*  3 item take place in one column with 3fr distance   */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));      /*screen choto boro korleo auto fit hoye jabe */
+    grid-template-rows: 1fr 1fr 4fr;                                  /* 1st and 2nd will take place 1fr and 3rd = 4fr (fraction) */
+    grid-auto-rows: 2fr;                                              /* if there any extra they will take place auto 2 fr  */
+    grid-gap: 2rem                                                    /* space bitween two  */
+}
+
+.grid:first-child{
+    grid-column-start: 1;                 /* it will take length of 3 items   */
+    grid-column-end: 4;
+
+    grid-row-start: 1;                    /* it will take width of 3 items   */
+    grid-row-end: 4;
+
+
+    grid-column: 1 / span 3;              /* it will take length of 3 items   */
+    grid-row: 1 / span 3;
+} 
