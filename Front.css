@@ -1,0 +1,247 @@
+.{                            /* Sob elemenet er jonno kaj korbe */ 
+    box-sizing: border-box;     
+}
+
+
+.Front {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    line-height: 5.2em;    /* line distance with upper line */
+    font-weight: bold;
+    font: rgb(12, 58, 12);
+    background-color: gray;
+    border-image: url(  );
+    height: 100px;         /*  height increase */
+    width: 20px;           /* width increase/ decrease */
+    border-style: blue;  /* create border around */
+    border-radius: 3px;    /* border like circle */
+}
+
+.Border {
+    border-top: 2px solid purple;
+    border-right: 2px solid green;
+    border-bottom:  2px solid yellow;
+    border-left: 2px solid red;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.BG {
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat; /*sudu 1 bar dekhabe  */
+    background-position: center center;   /*majh borabor*/
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box {
+    padding: 10px;       /* 1st  */
+    padding-left: 5px;
+    border: 10px;        /*  2nd */
+    border-radius: 10px;  /* round shape  */
+    margin: 2px;         /*  3rd  */
+
+}
+
+
+.container {
+    width: 900px;
+    padding: 12px 12px;
+    margin: auto;
+}
+
+.item {
+    border:  3px solid gray;
+    padding: 12px 12px;
+    background-color: aliceblue;
+}
+
+
+#ABC {
+    float: left;     /* ba pashe niye asbe   ebong box-sizing: border-box; dile ABC, BCA pasapasi chole asbe  */
+    width: 50px;
+}
+
+#BCA {
+    float: left;
+    width: 50px;
+}
+
+#ACB {
+    float: left;
+    clear: left;  /* ba pasher bos ACB er upore asbe nah */
+    clear: right;   /* dan pasher bos ACB er upore asbe nah */
+    clear: both;    /* 2 pasher bos ACB er upore asbe nah */
+    width: 100px;
+}
+
+
+
+p {
+    text-align: center;
+    text-align: justify;
+}
+
+
+.btn {
+    padding: 5px;
+    border: 10px;
+    background-color: darkgreen;
+    cursor: pointer;   
+    font-size: 30px;
+    border-radius: 5px;
+
+}
+
+.btn:hover{
+    background-color: gray;
+}
+
+a {
+    text-decoration: none;     /* underline uthe jabe */ 
+    color: black;
+} 
+
+a:hover {
+    color: black;
+    background-color: white;   /* link er upor cursor niye gelei color change hobe */ 
+}
+
+a:visited {
+    background-color: red;     /* ekbar visit hoye gele color red hoye jabe */ 
+}
+
+a:active {
+    background-color: yellow;
+}
+
+
+.navbar {
+    background-color: black;
+    border-radius: 6px;
+}
+
+.navbar ul {
+    overflow: auto;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    margin: 15px 25px;
+}
+
+.navbar li a{
+    padding: 10px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.navbar input {
+
+}
+
+img {
+    display: block;     /* kototuk jayga lage seta margin auto kore set kore dite pari */ 
+    display: inline;    /* Pura jayga niye ney */ 
+    display: inline-block;    /* uporer 2/3/4 ta eksathe kora jabe */ 
+    display: flex;
+    display: grid;
+    display: flexbox;
+
+}
+
+
+.box {
+    border: 4px solid black;
+    background-color: gray;
+    margin: 4px;
+    padding: 5px;
+    display: block;
+    box-sizing: border-box;     /* total size set including margine and padding */ 
+    position: absolute;         /* purono position e thakbe  */ 
+    position: relative;         
+    position: static;           /* purono position theke sore jabe */  
+    position: sticky;           /* eta o prai fixed er moto kaj kore */ 
+    position: fixed;             /* container scroll korleo box er position thik thakbe */ 
+
+
+
+
+    display: none;               /* faka jayga dekhabe nah */ 
+    visibility: hidden;          /* Fakanjayga dekhabe */ 
+
+     z-index: 25px;              /* onek gulo box thekle z-index er man jar beshi se upore thakbe */ 
+} 
+
+
+
+.flexbox {
+    height: 50px;
+    width: 50px;
+    display: flex;                 /* Item ROW--Column */ 
+
+
+    /* flex property for flex container */
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;                            /* continuing wraped when screen size chaanged */ 
+    flex-direction: stretch;                    /* take full place of th container */ 
+
+
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: space-around;
+
+
+    align-items: center;       /* purono position theke sore jabe */ 
+    align-items: baseline;
+}
+
+
+
+#flex-item {
+    flex-grow: 3;     /* increase that flex-item size when screen size changed */
+
+}
+
+
+
+@media (min-width: 100px) and (max-width: 300px) {          /* screen choto boro korle px onujay box change hobe */ 
+    #box-1{
+        display: block;                                     /* row to column transfrom  */
+        background-color: orchid;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    #box-1{
+        display: block;
+        background-color: orchid;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    #box-1{
+        display: block;
+        background-color: orchid;
+    }
+}
+
+
+
+.box_shadow {
+    box-shadow: 5px 5px gray;
+    blur
+}
